@@ -1,0 +1,11 @@
+{
+  "slug": "model-registry-check",
+  "title": "Model registry manifest check",
+  "description": "Check local artifact SHA-256 hashes, confined paths, unique versions, stage rules and required evaluation metadata for production-stage manifest entries.",
+  "category": "evaluation",
+  "demo_args": [
+    "--input",
+    "example.json"
+  ],
+  "expected_exit": 0
+}
