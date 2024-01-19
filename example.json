@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "name": "synthetic-demo",
+      "version": "1.0.0",
+      "stage": "production",
+      "artifact": "artifact.json",
+      "sha256": "06fd8fc5301c39c64f01a19974d20ab8e6c0f951b176f5d136a3d65ede91dba2",
+      "evaluation": {
+        "dataset": "synthetic-fixture-v1",
+        "metrics": {
+          "accuracy": 0.8
+        }
+      }
+    }
+  ]
+}
