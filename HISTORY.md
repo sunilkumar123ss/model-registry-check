@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 2 of 13. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 3 of 13. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -14,7 +14,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | --- | --- | --- |
 | 1 | 2023-10-16T16:45:14+05:30 | Define package metadata and local artifact exclusions (present) |
 | 2 | 2024-01-19T09:04:39+05:30 | Add synthetic input fixtures and reference data (present) |
-| 3 | 2024-08-07T18:39:36+05:30 | Implement verify (later stage) |
+| 3 | 2024-08-07T18:39:36+05:30 | Implement verify (present) |
 | 4 | 2024-10-11T09:05:43+05:30 | Expose the command-line demonstration and input handling (later stage) |
 | 5 | 2024-11-14T18:20:19+05:30 | Test rejects nonobject evaluation (later stage) |
 | 6 | 2024-11-27T11:17:58+05:30 | Test rejects nonobject manifest and entry (later stage) |
