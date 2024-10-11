@@ -56,3 +56,27 @@ def verify(manifest, artifact_root):
         verified.append({"name": name, "version": version, "stage": stage, "sha256": digest})
     return {"valid": True, "verified": verified, "production": production}
 
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--input", required=True, help="manifest JSON")
+    parser.add_argument("--artifact-root", default=".")
+    args = parser.parse_args()
+    try:
+        input_path = Path(args.input)
+        if not input_path.is_absolute():
+            input_path = Path(__file__).resolve().parent / input_path
+        with input_path.open(encoding="utf-8") as handle:
+            manifest = json.load(handle)
+        artifact_root = Path(args.artifact_root)
+        if not artifact_root.is_absolute():
+            artifact_root = Path(__file__).resolve().parent / artifact_root
+        print(json.dumps(verify(manifest, artifact_root), indent=2))
+        return 0
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        print(f"Invalid registry: {error}", file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main())
