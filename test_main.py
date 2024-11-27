@@ -21,3 +21,8 @@ class RegistryTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaisesRegex(ValueError, "evaluation must"):
                 verify({"entries": [dict(self.entry, evaluation=value)]}, self.root)
 
+    def test_rejects_nonobject_manifest_and_entry(self):
+        for value in ([], {"entries": [None]}):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                verify(value, self.root)
+
