@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 6 of 13. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 7 of 13. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -18,7 +18,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 4 | 2024-10-11T09:05:43+05:30 | Expose the command-line demonstration and input handling (present) |
 | 5 | 2024-11-14T18:20:19+05:30 | Test rejects nonobject evaluation (present) |
 | 6 | 2024-11-27T11:17:58+05:30 | Test rejects nonobject manifest and entry (present) |
-| 7 | 2025-01-29T18:06:34+05:30 | Test valid manifest (later stage) |
+| 7 | 2025-01-29T18:06:34+05:30 | Test valid manifest (present) |
 | 8 | 2025-06-09T11:48:37+05:30 | Test tampering (later stage) |
 | 9 | 2025-09-06T14:53:37+05:30 | Test duplicate production and missing evaluation (later stage) |
 | 10 | 2025-09-19T10:44:40+05:30 | Test path escape and version (later stage) |

@@ -26,3 +26,6 @@ class RegistryTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 verify(value, self.root)
 
+    def test_valid_manifest(self):
+        self.assertEqual(verify({"entries": [self.entry]}, self.root)["production"], {"demo": "1.0.0"})
+
