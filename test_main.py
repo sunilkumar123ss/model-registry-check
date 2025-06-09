@@ -29,3 +29,8 @@ class RegistryTests(unittest.TestCase):
     def test_valid_manifest(self):
         self.assertEqual(verify({"entries": [self.entry]}, self.root)["production"], {"demo": "1.0.0"})
 
+    def test_tampering(self):
+        (self.root / "artifact.json").write_text("changed", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "checksum"):
+            verify({"entries": [self.entry]}, self.root)
+
