@@ -34,3 +34,12 @@ class RegistryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "checksum"):
             verify({"entries": [self.entry]}, self.root)
 
+    def test_duplicate_production_and_missing_evaluation(self):
+        second = copy.deepcopy(self.entry)
+        second["version"] = "1.1.0"
+        with self.assertRaisesRegex(ValueError, "one production"):
+            verify({"entries": [self.entry, second]}, self.root)
+        del second["evaluation"]
+        with self.assertRaisesRegex(ValueError, "dataset"):
+            verify({"entries": [second]}, self.root)
+
