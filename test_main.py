@@ -43,3 +43,12 @@ class RegistryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "dataset"):
             verify({"entries": [second]}, self.root)
 
+    def test_path_escape_and_version(self):
+        for field, value in [("artifact", "../escape.json"), ("version", "01.0.0")]:
+            entry = dict(self.entry, **{field: value})
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                verify({"entries": [entry]}, self.root)
+
+
+if __name__ == "__main__":
+    unittest.main()
